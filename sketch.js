@@ -15,11 +15,11 @@ function preload(){
 //Função para definir o ambiente inicial
 function setup() {
 
-   database = firebase.database();
+  database = firebase.database();
 
   createCanvas(1500,700);
 
-  balloon = createSprite(250,650,150,150);
+  balloon = createSprite(width / 2, height / 2, 150, 150);//250, 650, 150, 150
   balloon.addAnimation("hotAirBalloon",balloonImage1);
   balloon.scale = 0.5;
 
@@ -27,7 +27,7 @@ function setup() {
   balloonHeight.on("value", readHeight, showError);
 
 
-
+  
   textSize(20); 
 }
 
