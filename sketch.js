@@ -25,7 +25,7 @@ function setup() {
   balloon.addAnimation("hotAirBalloon",balloonImage1);
   balloon.scale = 0.5;
 
-  var balloonHeight = database.ref('balloon/height');
+  var balloonHeight = database.ref('/Balão De Ar/balloon/height');
   balloonHeight.on("value", readHeight, showError);
 
 
@@ -64,7 +64,7 @@ function draw() {
 }
 
  function updateHeight(x,y){
-   database.ref('balloon/height').set({
+   database.ref('/Balão De Ar/balloon/height').set({
      'x': height.x + x ,
      'y': height.y + y
    })
