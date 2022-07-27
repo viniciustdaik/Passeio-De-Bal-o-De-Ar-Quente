@@ -3,6 +3,8 @@ var balloon, balloonImage1, balloonImage2;
 var database;
 var height;
 
+var balloonimg;
+
 //Coordenadas De Início Do Balão, Computador. : x: 750, y: 350.
 
 function preload(){
@@ -18,6 +20,9 @@ function preload(){
 function setup() {
 
   database = firebase.database();
+
+  balloonimg = createImg("./Images/HotAirBallon01.png");
+  balloonimg.position(width-width-width, height-height-height);
   
   createCanvas(windowWidth - 4, windowHeight - 8);//1500, 700
 
